@@ -1,0 +1,95 @@
+@import "../../styles.scss";
+//  _nav.scss
+nav {
+  display: none;
+  @include nav;
+  @include media("dekstop") {
+    @include nav;
+  }
+}
+
+.nav-open {
+  overflow: hidden;
+  @include navOpenClose;
+  @include nav;
+  z-index: 1;
+  ul {
+    li {
+      @include media("dekstop") {
+        width: 100%;
+        height: auto;
+        margin: 0 25.4vh 0 -1.9vh;
+      }
+      @include media("tablet") {
+        margin: 0 0px 0 -10px;
+      }
+    }
+  }
+  animation: nav--open 1s ease-in-out 0s 1 normal forwards;
+  @include drapeaulangue;
+}
+
+// animation: nav--close 1s ease-in-out 0s 1 normal forwards;
+
+.nav-close {
+  display: block;
+  @include navOpenClose;
+  @include nav;
+  ul {
+    li {
+      @include media("dekstop") {
+        width: 100%;
+        height: auto;
+        margin: 0 23vh 0 0vh;
+      }
+      @include media("tablet") {
+        margin: 0 0px 0 0px;
+      }
+    }
+  }
+  animation: nav--close 1s ease-in-out 0s 1 normal forwards;
+  @include drapeaulangue;
+
+  @include media("dekstop") {
+    display: block;
+    @include navOpenClose;
+    @include nav;
+    ul {
+      li {
+        @include media("dekstop") {
+          width: 100%;
+          height: auto;
+          margin: 0 23vh 0 0vh;
+        }
+        @include media("tablet") {
+          margin: 0 0px 0 0px;
+        }
+      }
+    }
+    animation: nav--close 1s ease-in-out 0s 1 normal forwards;
+    @include drapeaulangue;
+  }
+}
+.nav-animation {
+  @include navOpenClose;
+  animation: menu 1.9s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal forwards;
+
+  @include media("dekstop") {
+    @include navOpenClose;
+    animation: menu 1.9s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal
+      forwards;
+  }
+}
+
+.image {
+  // dreapeau france nav
+  width: 6%;
+}
+
+// _darkmodeinput.scss
+.nav {
+  align-self: center;
+  @include darkmode;
+  @include darkmode-animation;
+  @include lamp;
+}
