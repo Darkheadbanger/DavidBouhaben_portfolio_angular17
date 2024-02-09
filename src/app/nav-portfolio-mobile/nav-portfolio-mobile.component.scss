@@ -1,10 +1,12 @@
 @import "../../styles.scss";
 //  _nav.scss
-nav {
+.nav-container {
   display: none;
-  @include nav;
-  @include media("dekstop") {
+  .nav-mobile {
     @include nav;
+    @include media("dekstop") {
+      @include nav;
+    }
   }
 }
 

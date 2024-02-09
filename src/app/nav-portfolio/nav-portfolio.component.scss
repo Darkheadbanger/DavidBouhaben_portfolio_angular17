@@ -1,13 +1,9 @@
 @import "../../styles.scss";
 
-.nav {
-  @include darkmode;
-  @include darkmode-animation;
-  @include lamp;
-}
-
 .nav-desktop {
-  @include darkmode;
-  @include darkmode-animation;
-  @include lamp;
+  // @include media("dekstop") {
+  //   display: none;
+  // }
+  display: block;
+  @include nav-desktop; // .nav-desktop ul li
 }

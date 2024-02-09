@@ -1,12 +1,6 @@
 @import "../../styles.scss";
 
-.nav {
-  @include darkmode;
-  @include darkmode-animation;
-  @include lamp;
-}
-
-.nav-desktop {
+.darkmode {
   @include darkmode;
   @include darkmode-animation;
   @include lamp;

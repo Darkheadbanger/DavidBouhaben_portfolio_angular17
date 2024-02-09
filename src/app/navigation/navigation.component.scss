@@ -1,0 +1,9 @@
+@import "../../styles.scss";
+
+ul.styleMobile {
+  @include nav;
+}
+
+ul.styleDesktop {
+  @include nav-desktop;
+}
